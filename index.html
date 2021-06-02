@@ -3,8 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock, paper, scissors: The game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="container">
+        <h1 class="title">Rock, paper, scissors: The game</h1>
+        <p class="para-title">Wins who first achive 5 points.</p>
+        <div id="game">
+            <div class="human-side">
+                <h2>Select one:</h2>
+                <div class="btn-hum">
+                    <button id="rock" class="botones hoverbt">
+                        <img aria-hidden="true" src="images/rock.png" alt="Rock">Rock
+                    </button>
+                    <button id="paper" class="botones hoverbt">
+                        <img aria-hidden="true" src="images/paper.png" alt="Paper">Paper
+                    </button>
+                    <button id="scissor" class="botones hoverbt">
+                        <img aria-hidden="true" src="images/scissors.png" alt="Scissors">Scissors
+                    </button>
+                </div>
+                <p id="text-result"></p>
+            </div>
+        </div>
+        
+        <div class="result">
+            <div class="hum-list">
+                <h3>Your score</h3>
+                <ul id="score-hum">
+                    <li id="li-hum">0</li>
+                </ul>
+            </div>
+
+            <div class="pc-list">
+                <h3>PC's score</h3>
+                <ul id="score-pc">
+                    <li id="li-pc">0</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="resultado-final">
+        <p id="resultado-text" class="hidden"></p>
+    </div>
+    <button id="boton-final" class="hidden">Start again</button>
+
     <script src="script.js"></script>
 </body>
 </html>
