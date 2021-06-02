@@ -13,11 +13,11 @@ function removeTransition(e){
 function userSelec(e){
     let userT = document.getElementById(`${e.target.id}`);
     let pcT = computerSelec();
+    userT.classList.replace("hoverbt","selected");
+    userT.addEventListener('transitionend', removeTransition);
     let sentT = userT.id;
     let secuen = evaluate(sentT, pcT);
     tableScore(secuen);
-    userT.classList.replace("hoverbt","selected");
-    userT.addEventListener('transitionend', removeTransition);
 }
 
 function evaluate (playerSelection,computerSelection){
@@ -78,6 +78,11 @@ function restart(){
     valU = 0;
     liPc.textContent = `${valPc}`;
     liU.textContent = `${valU}`;
+    btn.forEach((button) => {
+        if (button.classList.contains("selected")){
+            button.classList.replace("selected","hoverbt")
+        }
+    });
 }
 
 
