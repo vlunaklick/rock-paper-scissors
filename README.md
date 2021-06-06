@@ -1,5 +1,5 @@
 # Rock, paper and scissors
-[Link page](https://vlunaklick.github.io/calculator_top/)
+[Link page](https://vlunaklick.github.io/rock-paper-scissors/)
 
 In this project i recreated the game "**Rock, paper and scissors**".
 
