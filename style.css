@@ -1,24 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-body{
+:root{
+    --shadow-color: 210deg 11% 60%;
+    --shadow-elevation-low:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+    --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+    --shadow-elevation-high:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #22223b;
-    color: #f2e9e4;
+}
+html, body {
+    height: 100%;
+    font-size: 16px
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: -apple-system, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Cantarell", "Helvetica Neue";
+    margin: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
 }
 
 h1 {
     text-align: center;
     text-decoration: underline;
     margin-bottom: 0;
-    text-shadow: 0 0 2px #000;
+}
+
+#container{
+    background-color: #F0F4F8;
+    color: #102A43;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .para-title{
     text-align: center;
     font-style: italic;
     margin-top: 0;
-    text-shadow: 0 0 2px #000;
 }
 
 img{
@@ -34,16 +90,13 @@ img{
     width: 100%;
     height: 100%;
     justify-content: center;
-    margin-top: 50px;
 }
 
 button{
     display: flex;
     flex-direction: column;
-    margin-right: 10px;
-    background-color: #9a8c98;
+    background-color: #627D98;
     border: none;
-    margin-left: 10px;
     transition: 0.7s;
     cursor: pointer;
 }
@@ -52,26 +105,28 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
 .btn-hum{
     display: flex;
-    border: 1px solid #2e3142;
-    padding: 25px;
-    margin-right: 20px;
-    box-shadow: 0 0 2px #fff;
-    background-color: #4a4e69;
+    border: 1px solid #9FB3C8;
+    padding: 1.5625rem;
+    box-shadow: var(--shadow-elevation-medium);
+    background-color: #BCCCDC;
+    border-radius: .3125rem;
+    gap: 1rem;
 }
 
 
 .hoverbt:hover{
-    box-shadow: 0 0 5px 2px rgba(0,0,0,0.71);
+    box-shadow: var(--shadow-elevation-low);
     transform: scale(1.1);
 }
 
 .selected{
     box-shadow: 0 0 5px 2px rgba(108, 255, 169, 0.71);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .result{
@@ -112,9 +167,8 @@ h3{
     font-size: 30px;
     font-weight: 900;
     margin-top: 40px;
-    text-shadow: 0 0 2px #000;
-    background-color: #3e3e6b;
-    box-shadow: 0 0 2px #000;
+    background-color: #486581;
+    box-shadow: var(--shadow-elevation-medium);
 }
 
 #boton-final{
@@ -127,5 +181,5 @@ h3{
 }
 
 #boton-final:hover{
-    box-shadow: 0 0 4px 1px #000;
+    box-shadow: var(--shadow-elevation-medium);
 }

@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <title>Rock, paper, scissors: The game</title>
     <link rel="stylesheet" href="style.css">
+    <meta content='width=device-width,initial-scale=1' name='viewport'>
 </head>
 <body>
     <div id="container">
-        <h1 class="title">Rock, paper, scissors: The game</h1>
-        <p class="para-title">Wins who first achive 5 points.</p>
+        <header>
+            <h1 class="title">Rock, paper, scissors: The game</h1>
+            <p class="para-title">Wins who first achive 5 points.</p>
+        </header>
+        
         <div id="game">
             <div class="human-side">
                 <h2>Select one:</h2>
@@ -42,12 +46,13 @@
                 </ul>
             </div>
         </div>
+        <div id="resultado-final">
+            <p id="resultado-text" class="hidden"></p>
+        </div>
+        <button id="boton-final" class="hidden">Start again</button>
     </div>
 
-    <div id="resultado-final">
-        <p id="resultado-text" class="hidden"></p>
-    </div>
-    <button id="boton-final" class="hidden">Start again</button>
+    
 
     <script src="script.js"></script>
 </body>
