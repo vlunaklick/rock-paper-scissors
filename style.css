@@ -99,6 +99,7 @@ button{
     transition: 0.7s;
     cursor: pointer;
     padding: .5625rem;
+    align-items: center;
 }
 
 .human-side{

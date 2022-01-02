@@ -11,7 +11,6 @@ function userSelec(e) {
 	} else {
 		variable = e.originalTarget.parentElement.id
 	}
-	console.log(variable)
 	let userT = document.getElementById(variable)
 	let pcT = computerSelec()
 	let sentT = userT.id
